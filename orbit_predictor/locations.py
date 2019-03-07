@@ -135,7 +135,7 @@ class Location(object):
     def doppler_factor(self, position):
         """Doppler effect factor relative to 1"""
         range_rate = self.slant_range_velocity_kms(position)
-        return 1. + (range_rate / LIGHT_SPEED_KMS)
+        return 1. - (range_rate / LIGHT_SPEED_KMS)
 
 
 # A hardcoded list of locations. Some of them are satellite groundstations or HAM
